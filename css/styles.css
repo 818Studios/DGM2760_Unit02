@@ -170,30 +170,41 @@ html {
 }
 /* BODY  */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 16px;
 }
 /* HEADER  */
 header {
   background-image: url(../images/header560.jpg);
   height: 110px;
+  padding-left: 2%;
+}
+header h1,
+header h2 {
+  color: #FFFFFA;
 }
 header h1 {
-  display: none;
+  font-size: 36px;
+}
+header h2 {
+  font-size: 24px;
 }
 /* NAVigation  */
 nav {
   display: flex;
   flex-direction: column;
+  background-color: #304c5a;
 }
 nav a {
   width: 100%;
   text-align: center;
-  margin: .25rem auto;
-  padding: .5rem .5rem;
+  padding: .75rem .5rem;
   text-decoration: none;
   color: #FFFFFA;
-  background-color: darkgray;
+  background-color: #304c5a;
+}
+nav a:hover {
+  background-color: #273e49;
 }
 /* MAIN  */
 main {
@@ -201,9 +212,10 @@ main {
 }
 /* FOOTER  */
 footer {
-  color: #0064a5;
-  padding: 2rem 0;
+  background-color: #304c5a;
+  padding: 1rem 0;
   text-align: center;
+  color: #FFFFFA;
 }
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -217,6 +229,11 @@ footer {
     background-image: url(../images/header1024.jpg);
     height: 200px;
   }
+  nav {
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
   /* MAIN  */
 }
 @media only screen and (min-width: 64em) {
@@ -224,5 +241,8 @@ footer {
   header {
     height: 300px;
     background-image: url(../images/header1920.jpg);
+  }
+  nav {
+    justify-content: flex-start;
   }
 }

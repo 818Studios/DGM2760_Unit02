@@ -15,11 +15,20 @@ body {
 header {
 	background-image: url(../images/header560.jpg);
 	height: 110px;
+	padding-left: @edge;
 
 
 
-	h1 {
-		display: none;
+	h1, h2 {
+		color: #FFFFFA;
+	}
+
+	h1{
+		font-size: 36px;
+	}
+
+	h2{
+		font-size: 24px;
 	}
 
 } // end header
@@ -30,15 +39,20 @@ header {
 nav{
 	display: flex;
 	flex-direction: column;
+	background-color: @primaryNavColor;
 	
 	a{
 		width: 100%;
 		text-align: center;
-		margin: .25rem auto;
-		padding: .5rem .5rem;
+		padding: .75rem .5rem;
 		text-decoration: none;
 		color: #FFFFFA;
-		background-color: darkgray;
+		background-color: @primaryNavColor;
+	}
+
+
+	a:hover{
+		background-color: darken(@primaryNavColor, 5%);
 	}
 }
 
@@ -50,9 +64,10 @@ main {
 
 /* FOOTER  */
 footer {
-	color: @primaryColor;
-	padding: 2rem 0;
+	background-color: @primaryNavColor;
+	padding: 1rem 0;
 	text-align: center;
+	color: #FFFFFA;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
