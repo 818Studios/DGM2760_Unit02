@@ -210,6 +210,9 @@ nav a:hover {
 main {
   padding: 1rem 0;
 }
+main #docsSection {
+  margin-top: 1em;
+}
 /* FOOTER  */
 footer {
   background-color: #304c5a;
